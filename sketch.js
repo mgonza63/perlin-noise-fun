@@ -49,34 +49,57 @@
 
 // // <-- Moving Graph -->
 
-var inc = 0.01
+// var inc = 0.01
+
+// function setup() {
+//     createCanvas(400, 400);
+    
+// }
+
+// function draw() {
+
+//     var yoff = 0;
+    
+//     loadPixels();
+//     for (var y = 0; y < width; y++) {
+//         var xoff = 0;
+//         for (var x = 0; x < width; x++) {
+//             var index = (x + y * width) * 4;
+//             var r = noise(xoff, yoff) * 255;
+//             pixels[index + 0] = r;
+//             pixels[index + 1] = r;
+//             pixels[index + 2] = r;
+//             pixels[index + 3] = 255;
+
+//             xoff += inc
+            
+//         }
+//         yoff += inc
+//     }
+//     updatePixels();
+// }
+
+// // <-- Moving Graph -->
+
+var cols, rows;
+var scl = 20;
 
 function setup() {
-    createCanvas(400, 400);
-    
+    createCanvas(600,600, WEBGL);
+    var w = 600;
+    var h = 600;
+    cols = w / scl;
+    rows = h / scl;
 }
 
 function draw() {
+    background(0);
 
-    var yoff = 0;
-    
-    loadPixels();
-    for (var y = 0; y < width; y++) {
-        var xoff = 0;
-        for (var x = 0; x < width; x++) {
-            var index = (x + y * width) * 4;
-            var r = noise(xoff, yoff) * 255;
-            pixels[index + 0] = r;
-            pixels[index + 1] = r;
-            pixels[index + 2] = r;
-            pixels[index + 3] = 255;
+    for (var x = 0; x< cols; x++) {
+        for (var y = 0; y< rows; y++) {
 
-            xoff += inc
-            
+
+
         }
-        yoff += inc
     }
-    updatePixels();
 }
-
-// <-- Moving Graph -->
